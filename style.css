@@ -137,3 +137,17 @@ button {
     flex-direction: column;
   }
 }
+
+body {
+  padding: 0 2rem;
+}
+
+header,
+.hero,
+.section,
+.resources,
+.gallery,
+.about {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
