@@ -1,56 +1,70 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0a0f13; /* preto azulado */
-  color: white;
-  padding: 0 2rem;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YUABA STUDIOS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>YUABA STUDIOS</h1>
+    <nav>
+      <a href="#">Página Inicial</a>
+      <a href="#">Recursos</a>
+      <a href="#">Galeria</a>
+      <a href="#">Sobre</a>
+      <a href="#">Apoie</a>
+    </nav>
+  </header>
 
-header {
-  text-align: center;
-  padding: 2rem 0;
-}
+  <main>
+    <!-- Bloco 1 -->
+    <section class="sessao">
+      <div class="conteudo">
+        <div class="texto">
+          <h2>QUEM SOMOS?</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit hendrerit nisi, vehicula dignissim est laoreet non. Fusce malesuada interdum velit.</p>
+        </div>
+        <div class="imagem">
+          <img src="img/placeholder1.png" alt="Imagem de exemplo 1" />
+        </div>
+      </div>
+      <hr />
+    </section>
 
-header h1 {
-  margin: 0;
-  color: white;
-  font-size: 2.5rem;
-}
+    <!-- Bloco 2 -->
+    <section class="sessao">
+      <div class="conteudo">
+        <div class="texto">
+          <h2>MISSÃO</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet ligula ut sem efficitur porta. Cras tristique rutrum purus, nec volutpat nisl pretium vel.</p>
+        </div>
+        <div class="imagem">
+          <img src="img/placeholder2.png" alt="Imagem de exemplo 2" />
+        </div>
+      </div>
+      <hr />
+    </section>
 
-nav {
-  margin-top: 1rem;
-}
+    <!-- Bloco 3 -->
+    <section class="sessao">
+      <div class="conteudo">
+        <div class="texto">
+          <h2>VISÃO DE FUTURO</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut arcu eros. Nunc non elit blandit, fringilla erat in, porttitor sapien.</p>
+        </div>
+        <div class="imagem">
+          <img src="img/placeholder3.png" alt="Imagem de exemplo 3" />
+        </div>
+      </div>
+      <hr />
+    </section>
+  </main>
 
-nav a {
-  margin: 0 1rem;
-  color: #44ccff;
-  text-decoration: none;
-}
+  <footer>
+    <p>&copy; 2025 YUABA STUDIOS</p>
+  </footer>
+</body>
+</html>
 
-.hero,
-.resources,
-.gallery,
-.about {
-  margin-top: 3rem;
-}
-
-.hero img,
-.gallery img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #44ccff;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
-
-.resource-item {
-  margin-bottom: 2rem;
-}
