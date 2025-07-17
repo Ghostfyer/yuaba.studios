@@ -105,3 +105,10 @@ footer {
     max-width: 100%;
   }
 }
+/* Centralizado para blocos sem imagem */
+.centralizado .conteudo-coluna {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
