@@ -45,9 +45,20 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.texto,
+.imagem {
+  flex: 1 1 400px;
+  min-width: 300px;
+  max-width: 600px;
+}
+
 
 .texto {
   flex: 1 1 400px;
