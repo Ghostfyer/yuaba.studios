@@ -8,15 +8,15 @@ body, h1, h2, p, a {
 
 /* Cor de fundo e texto do site */
 body {
-  background-color: #0e0f1a; /* Fundo escuro */
-  color: #e0e0e0; /* Texto claro para contraste */
+  background-color: #0e0f1a;
+  color: #e0e0e0;
   font-size: 16px;
   line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #11121d; /* Azul bem escuro */
+  background-color: #11121d;
   padding: 40px 20px;
   text-align: center;
   color: white;
@@ -29,7 +29,7 @@ header h1 {
 }
 
 nav a {
-  color: #00bfff; /* Azul suave para os links */
+  color: #00bfff;
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
@@ -48,7 +48,7 @@ main {
 
 /* Estilo das seções principais */
 .sessao {
-  background-color: #1a1a1a; /* Azul escuro mais forte para as caixas */
+  background-color: #16202b; /* Aplicada nova cor */
   margin: 40px auto;
   padding: 40px;
   border-radius: 20px;
@@ -58,7 +58,7 @@ main {
 }
 
 .sessao:hover {
-  transform: translateY(-10px); /* Efeito de flutuar nas seções */
+  transform: translateY(-10px);
 }
 
 .sessao h2 {
@@ -73,11 +73,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; /* Adicionado para melhor alinhamento vertical */
+  align-items: center;
   gap: 40px;
-  
-  /* --- MUDANÇA 1 --- */
-  /* Define este container como referência para a linha vertical */
   position: relative;
 }
 
@@ -94,7 +91,6 @@ main {
   margin-bottom: 20px;
 }
 
-/* Imagem */
 .imagem {
   flex: 1;
   min-width: 320px;
@@ -108,22 +104,11 @@ main {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* --- MUDANÇA 2: CRIAÇÃO DA LINHA VERTICAL (VERSÃO DE TESTE) --- */
-.conteudo::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Ocupa toda a largura */
-  height: 10px; /* 10px de altura */
-  background-color: red; /* COR VERMELHA BEM FORTE */
-  z-index: 999; /* Garante que fique na frente de tudo */
-}
-
+/* >>> REMOVIDO: BLOCO DE TESTE COM LINHA VERMELHA <<< */
 
 /* Bloco de apoio (última seção) */
 .apoio {
-  background-color: #16202b; /* Azul escuro mais suave para "Como Apoiar" */
+  background-color: #16202b;
 }
 
 .apoio-conteudo {
@@ -179,14 +164,10 @@ footer {
     padding-left: 0;
     padding-right: 0;
   }
-  
-  /* --- MUDANÇA 3 --- */
-  /* Esconde a linha vertical em telas pequenas */
-  .conteudo::after {
-    display: none;
-  }
 
   .sessao {
     padding: 20px;
   }
+
+  /* Linha de teste foi removida, então nada a esconder aqui */
 }
