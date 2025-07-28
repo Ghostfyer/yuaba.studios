@@ -8,15 +8,15 @@ body, h1, h2, p, a {
 
 /* Cor de fundo e texto do site */
 body {
-  background-color: #f7f8fa; /* Cor de fundo clara */
-  color: #333; /* Texto escuro para maior legibilidade */
+  background-color: #0e0f1a; /* Fundo escuro */
+  color: #e0e0e0; /* Texto claro para contraste */
   font-size: 16px;
   line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #1e2a40; /* Azul mais escuro */
+  background-color: #11121d; /* Azul bem escuro */
   padding: 40px 20px;
   text-align: center;
   color: white;
@@ -29,7 +29,7 @@ header h1 {
 }
 
 nav a {
-  color: #00bfff;
+  color: #00bfff; /* Azul suave para os links */
   text-decoration: none;
   margin: 0 20px;
   font-weight: bold;
@@ -48,7 +48,7 @@ main {
 
 /* Estilo das seções principais */
 .sessao {
-  background-color: #ffffff; /* Fundo branco para dar contraste */
+  background-color: #1a1a1a; /* Azul escuro com cinza */
   margin: 40px auto;
   padding: 40px;
   border-radius: 20px;
@@ -65,7 +65,7 @@ main {
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 600;
-  color: #333;
+  color: #e0e0e0;
 }
 
 /* Layout da seção de conteúdo */
@@ -81,7 +81,7 @@ main {
   flex: 1;
   min-width: 320px;
   max-width: 55%;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .texto p {
