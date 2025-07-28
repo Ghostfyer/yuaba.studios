@@ -73,7 +73,12 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center; /* Adicionado para melhor alinhamento vertical */
   gap: 40px;
+  
+  /* --- MUDANÇA 1 --- */
+  /* Define este container como referência para a linha vertical */
+  position: relative;
 }
 
 /* Estilo do texto e imagem */
@@ -103,21 +108,35 @@ main {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Linha de separação entre imagem e texto */
-.conteudo > .texto {
-  padding-right: 30px;
+/* --- MUDANÇA 2: CRIAÇÃO DA LINHA VERTICAL --- */
+.conteudo::after {
+  content: ""; /* Essencial para o pseudo-elemento funcionar */
+  position: absolute; /* Posiciona a linha dentro do .conteudo */
+  
+  /* Posição horizontal (58% da esquerda para a direita) */
+  left: 58%; 
+  
+  /* Alinhamento vertical (deixa 10% de margem no topo e na base) */
+  top: 10%;
+  bottom: 10%;
+  
+  width: 1px; /* Espessura da linha */
+  
+  /* Cor da linha (um branco com 20% de opacidade) */
+  background-color: rgba(224, 224, 224, 0.2); 
+  
+  /* Centraliza a linha em seu próprio eixo para precisão */
+  transform: translateX(-50%); 
 }
 
-.conteudo > .imagem {
-  padding-left: 30px;
-}
 
 /* Bloco de apoio (última seção) */
-.apoio-conteudo {
+.apoio {
   background-color: #16202b; /* Azul escuro mais suave para "Como Apoiar" */
+}
+
+.apoio-conteudo {
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: #fff;
 }
@@ -168,6 +187,12 @@ footer {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+  }
+  
+  /* --- MUDANÇA 3 --- */
+  /* Esconde a linha vertical em telas pequenas */
+  .conteudo::after {
+    display: none;
   }
 
   .sessao {
