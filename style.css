@@ -58,7 +58,7 @@ main {
 }
 
 .sessao:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .sessao h2 {
