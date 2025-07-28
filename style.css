@@ -1,156 +1,176 @@
-body {
+/* Reset de margens e fontes padrões */
+body, h1, h2, p, a {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0e0f1a;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Cor de fundo e texto do site */
+body {
+  background-color: #f7f8fa; /* Cor de fundo clara */
+  color: #333; /* Texto escuro para maior legibilidade */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #1e2a40; /* Azul mais escuro */
+  padding: 40px 20px;
+  text-align: center;
   color: white;
 }
 
-header {
-  background-color: #11121d;
-  padding: 20px;
-  text-align: center;
-}
-
 header h1 {
-  margin: 0;
-  color: #ffffff;
-  font-size: 2.2rem;
-}
-
-nav {
-  margin-top: 10px;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 nav a {
   color: #00bfff;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0 20px;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav a:hover {
   color: #ffffff;
+  transform: scale(1.1);
 }
 
+/* Espaçamento entre os blocos */
 main {
-  padding: 20px;
+  padding: 60px 20px;
 }
 
+/* Estilo das seções principais */
 .sessao {
-  background-color: #1e2a40; /* Azul mais sóbrio */
+  background-color: #ffffff; /* Fundo branco para dar contraste */
   margin: 40px auto;
-  padding: 30px;
+  padding: 40px;
   border-radius: 20px;
   max-width: 1100px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.sessao.apoio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 40px 20px;
+.sessao:hover {
+  transform: translateY(-10px); /* Efeito de flutuar nas seções */
 }
 
+.sessao h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Layout da seção de conteúdo */
 .conteudo {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 40px;
 }
 
-.texto,
-.imagem {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-}
-
-/* Texto */
+/* Estilo do texto e imagem */
 .texto {
-  color: #f1f1f1;
-  padding-right: 40px; /* Recuo maior para a linha */
-}
-
-.texto h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+  flex: 1;
+  min-width: 320px;
+  max-width: 55%;
+  color: #333;
 }
 
 .texto p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
 /* Imagem */
 .imagem {
+  flex: 1;
+  min-width: 320px;
+  max-width: 40%;
   text-align: center;
-  position: relative;
 }
 
-/* Imagem com borda e sombra */
 .imagem img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Linha de separação (agora na parte da imagem) */
-.conteudo > div:first-child {
-  border-right: 2px solid #00bfff; /* Linha vertical azul entre a imagem e o texto */
+/* Linha de separação entre imagem e texto */
+.conteudo > .texto {
+  padding-right: 30px;
 }
 
-.conteudo > div:last-child {
-  border-right: none; /* Remover linha da última imagem */
+.conteudo > .imagem {
+  padding-left: 30px;
 }
 
-/* Bloco de Apoio */
+/* Bloco de apoio (última seção) */
 .apoio-conteudo {
-  max-width: 700px;
-  background-color: #1e1f28;
+  background-color: #00bfff;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
   color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
 .apoio-conteudo h2 {
-  font-size: 28px;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .apoio-conteudo p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 25px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .botao-apoie {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #00bfff;
-  color: #000;
+  background-color: #0073e6;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .botao-apoie:hover {
-  background-color: #00a3cc;
+  background-color: #005bb5;
+  transform: scale(1.05);
 }
 
+/* Rodapé */
 footer {
   background-color: #11121d;
   padding: 20px;
   text-align: center;
   color: #aaa;
   font-size: 14px;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+  .conteudo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto, .imagem {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sessao {
+    padding: 20px;
+  }
 }
