@@ -38,7 +38,7 @@ main {
 }
 
 .sessao {
-  background-color: #1a1a1a;
+  background-color: #1e2a40; /* Azul mais sóbrio */
   margin: 40px auto;
   padding: 30px;
   border-radius: 20px;
@@ -67,13 +67,13 @@ main {
 
 .texto,
 .imagem {
-  flex: 1 1 400px;
+  flex: 1;
   min-width: 300px;
   max-width: 600px;
 }
 
+/* Texto */
 .texto {
-  flex: 1 1 500px;
   color: #f1f1f1;
 }
 
@@ -87,21 +87,28 @@ main {
   line-height: 1.6;
 }
 
+/* Imagem */
 .imagem {
-  flex: 1 1 400px;
   text-align: center;
+  position: relative;
 }
 
+/* Imagem com borda e sombra */
 .imagem img {
   max-width: 100%;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
-hr {
-  margin-top: 40px;
-  border: 0;
-  border-top: 1px solid #444;
+/* Linha de separação */
+.conteudo > div {
+  border-right: 2px solid #00bfff; /* Linha vertical azul entre a imagem e o texto */
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.conteudo > div:last-child {
+  border-right: none; /* Remover linha da última imagem */
 }
 
 /* Bloco de Apoio */
