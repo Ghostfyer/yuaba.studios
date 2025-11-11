@@ -1,173 +1,150 @@
-/* Reset de margens e fontes padrões */
-body, h1, h2, p, a {
+/* === RESET BÁSICO === */
+body, h1, p, a {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
   box-sizing: border-box;
 }
 
-/* Cor de fundo e texto do site */
-body {
+/* === ESTILO BASE === */
+body.linktree {
   background-color: #0e0f1a;
   color: #e0e0e0;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-/* Cabeçalho */
-header {
-  background-color: #11121d;
-  padding: 40px 20px;
-  text-align: center;
-  color: white;
-}
-
-header h1 {
-  font-size: 2.8rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-nav a {
-  color: #00bfff;
-  text-decoration: none;
-  margin: 0 20px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #ffffff;
-  transform: scale(1.1);
-}
-
-/* Espaçamento entre os blocos */
-main {
-  padding: 60px 20px;
-}
-
-/* Estilo das seções principais */
-.sessao {
-  background-color: #16202b; /* Aplicada nova cor */
-  margin: 40px auto;
-  padding: 40px;
-  border-radius: 20px;
-  max-width: 1100px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.sessao:hover {
-  transform: translateY(-5px);
-}
-
-.sessao h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 600;
-  color: #e0e0e0;
-}
-
-/* Layout da seção de conteúdo */
-.conteudo {
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  position: relative;
-}
-
-/* Estilo do texto e imagem */
-.texto {
-  flex: 1;
-  min-width: 320px;
-  max-width: 55%;
-  color: #e0e0e0;
-}
-
-.texto p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.imagem {
-  flex: 1;
-  min-width: 320px;
-  max-width: 40%;
+  justify-content: center;
   text-align: center;
-}
-
-.imagem img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* >>> REMOVIDO: BLOCO DE TESTE COM LINHA VERMELHA <<< */
-
-/* Bloco de apoio (última seção) */
-.apoio {
-  background-color: #16202b;
-}
-
-.apoio-conteudo {
   padding: 30px;
-  text-align: center;
-  color: #fff;
+  overflow: hidden;
 }
 
-.apoio-conteudo h2 {
-  font-size: 2rem;
+/* === CONTAINER === */
+.container {
+  background-color: #16202b;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  max-width: 420px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* === LOGO / AVATAR === */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
 }
 
-.apoio-conteudo p {
-  font-size: 18px;
+/* === ANIMAÇÃO DE ZOOM SUAVE === */
+.animate-logo {
+  animation: zoomIn 1.2s ease forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Fade geral do conteúdo */
+.animate-fade {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* === TEXTO === */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.descricao {
+  font-size: 1rem;
+  color: #b0b0b0;
   margin-bottom: 30px;
 }
 
-.botao-apoie {
+/* === BOTÕES === */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: 14px 20px;
   background-color: #0073e6;
   color: white;
-  padding: 15px 30px;
-  border-radius: 8px;
-  font-size: 16px;
+  border-radius: 10px;
   font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 115, 230, 0.2);
 }
 
-.botao-apoie:hover {
-  background-color: #005bb5;
-  transform: scale(1.05);
+.btn:hover {
+  background-color: #00bfff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 191, 255, 0.3);
 }
 
-/* Rodapé */
+/* Botão em destaque (ex: Catarse) */
+.btn.destaque {
+  background: linear-gradient(90deg, #0073e6, #00bfff);
+  color: #fff;
+  animation: brilho 3s ease-in-out infinite alternate;
+}
+
+@keyframes brilho {
+  from { box-shadow: 0 0 8px rgba(0, 191, 255, 0.2); }
+  to { box-shadow: 0 0 20px rgba(0, 191, 255, 0.5); }
+}
+
+/* === ANIMAÇÃO DO CONTAINER === */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RODAPÉ === */
 footer {
-  background-color: #11121d;
-  padding: 20px;
-  text-align: center;
-  color: #aaa;
-  font-size: 14px;
+  margin-top: 30px;
+  color: #777;
+  font-size: 0.8rem;
 }
 
-/* Responsividade para dispositivos menores */
-@media (max-width: 768px) {
-  .conteudo {
-    flex-direction: column;
-    align-items: center;
+/* === RESPONSIVO === */
+@media (max-width: 480px) {
+  .container {
+    padding: 30px 20px;
   }
-
-  .texto, .imagem {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+  .avatar {
+    width: 100px;
+    height: 100px;
   }
-
-  .sessao {
-    padding: 20px;
-  }
-
-  /* Linha de teste foi removida, então nada a esconder aqui */
 }
